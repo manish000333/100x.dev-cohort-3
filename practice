@@ -1,0 +1,106 @@
+declaretion of classes
+class rectangle {
+    constructor (width,height,colour){
+    this.width = width;
+    this.height = height;
+    this.colour = colour;
+    }
+    area() {
+        return this.width * this.height;
+    }
+}
+const rect = new rectangle (2,3,"red");
+console.log(rect.area())
+console.log(rect.colour)
+
+ls provided classes
+const now = new Date()
+console.log (now.getHours())
+
+const map = new Map()
+map.set("name","manish");
+map.set("age",30);
+console.log(map.get("age"))
+
+promises
+function setTimeoutPromisified(ms){
+    return new Promise(resolve=> setTimeout(resolve,ms));
+}
+function callback(){
+    console.log("after 3 sec it willl print")
+}
+setTimeoutPromisified(3000).then(callback)
+
+function waitfor3s (resolve){
+    setTimeout(resolve,3000);
+}
+function setTimeoutPromisified(){
+    return new Promise(waitfor3s);
+}
+function main (){
+    console.log("here we go ")
+}
+setTimeoutPromisified().then(main);
+creating setTimeoutpromisified function
+function setTimeoutPromisified(duration) {
+    return new Promise(function(resolve) {
+        setTimeout(resolve, duration); 
+    });
+}
+
+function callback() {
+    console.log("after 1 sec");
+}
+
+setTimeoutPromisified(1000).then(callback);
+
+callback hell
+ function setTimeoutPromisified(ms){
+    return new Promise(resolve => setTimeout(resolve,ms))
+}
+setTimeoutPromisified(1000).then(function(){
+console.log("after 1 sec")
+})
+setTimeoutPromisified(2000).then(function(){
+console.log("after 1+2 sec")
+})
+setTimeoutPromisified(3000).then(function(){
+console.log("after 1+2+3sec")
+})
+
+with await
+ function setTimeoutPromisified(ms){
+    return new Promise(resolve => setTimeout(resolve,ms))
+}
+async function solve (){
+    await setTimeoutPromisified(1000);
+    console.log("hi")
+    await setTimeoutPromisified(3000);
+    console.log("hello")
+    await setTimeoutPromisified(5000);
+    console.log("hi hello ")
+
+}
+solve();
+console.log("this prints first due to ansync function ")
+function stopwatch (){
+    const i =1
+    if (i<19){
+console.log(i)
+    }
+    setTimeout(()=>{
+        stopwatch(i+1);},1000)
+    }
+
+stopwatch()
+
+
+
+ 
+    
+
+
+
+
+
+
