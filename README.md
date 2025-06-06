@@ -1,1 +1,1 @@
-# 100x.dev-cohort-3
+100xdevs Cohort 3 Assignments
